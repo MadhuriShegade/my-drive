@@ -11,8 +11,7 @@
         "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
         "serve:ssr": "node dist/server",
         "build:client-and-server-bundles": "ng build --prod && ng run my-drive:server",
-        "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
-        "hmr": "ng serve --configuration hmr"
+        "webpack:server": "webpack --config webpack.server.config.js --progress --colors"
     },
     "private": true,
     "dependencies": {
