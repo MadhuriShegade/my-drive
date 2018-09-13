@@ -2,7 +2,7 @@
     "name": "my-drive",
     "version": "0.0.0",
     "scripts": {
-	"ng": "ng",
+        "ng": "ng",
         "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
         "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;",
         "start:heroku": "node dist/server",
@@ -14,7 +14,7 @@
         "e2e": "ng e2e",
         "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
         "serve:ssr": "node dist/server",
-        "build:client-and-server-bundles": "ng build --prod && ng run my-drive:server",
+        "build:client-and-server-bundles": "file ng; ng build --prod && ng run my-drive:server",
         "webpack:server": "webpack --config webpack.server.config.js --progress --colors"
     },
     "private": true,
@@ -58,5 +58,7 @@
         "typescript": "~2.7.2",
         "webpack-cli": "^3.1.0"
     },
-	"engines": { "node": "=9.8.0"}
+    "engines": {
+        "node": "=9.8.0"
+    }
 }
