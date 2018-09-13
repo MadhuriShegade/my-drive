@@ -2,8 +2,10 @@
     "name": "my-drive",
     "version": "0.0.0",
     "scripts": {
+        "start:heroku": "node dist/server",
+        "postinstall": "npm run build:ssr",
         "ng": "ng",
-        "start": "npm run build:ssr && npm run serve:ssr",
+        "start": "npm run serve:ssr",
         "build": "npm run build:ssr && npm run serve:ssr",
         "test": "ng test",
         "lint": "ng lint",
@@ -11,7 +13,8 @@
         "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
         "serve:ssr": "node dist/server",
         "build:client-and-server-bundles": "ng build --prod && ng run my-drive:server",
-        "webpack:server": "webpack --config webpack.server.config.js --progress --colors"
+        "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
+
     },
     "private": true,
     "dependencies": {
