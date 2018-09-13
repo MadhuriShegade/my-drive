@@ -14,7 +14,7 @@
         "e2e": "ng e2e",
         "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
         "serve:ssr": "node dist/server",
-        "build:client-and-server-bundles": "cat node_modules/@angular/core/package.json; cat node_modules/rxjs/package.json; node_modules/@angular/cli/bin/ng build --prod && node_modules/@angular/cli/bin/ng run my-drive:server",
+        "build:client-and-server-bundles": "ng build --prod && ng run my-drive:server",
         "webpack:server": "webpack --config webpack.server.config.js --progress --colors"
     },
     "private": true,
