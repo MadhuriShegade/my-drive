@@ -2,7 +2,7 @@
     "name": "my-drive",
     "version": "0.0.0",
     "scripts": {
-        "heroku-prebuild": "npm clean cache; export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
+        "heroku-prebuild": "npm cache clean --f; export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
         "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;",
         "start:heroku": "node dist/server",
         "postinstall": "npm run build:ssr",
