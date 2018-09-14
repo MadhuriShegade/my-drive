@@ -7,7 +7,7 @@
         "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;",
         "start:heroku": "node dist/server",
         "postinstall": "npm run build:ssr",
-        "start": "npm run serve:ssr",
+        "start": "ng serve --watch",
         "build": "npm run build:ssr && npm run serve:ssr",
         "test": "ng test",
         "lint": "ng lint",
